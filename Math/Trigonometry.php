@@ -38,7 +38,7 @@ class Trigonometry {/*{{{*/
     public static function sin($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         return Trigonometry::zeroIfVerySmall(sin(floatval($x)));
     } /*}}}*/
@@ -54,7 +54,7 @@ class Trigonometry {/*{{{*/
     public static function cos($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         return Trigonometry::zeroIfVerySmall(cos(floatval($x)));
     } /*}}}*/
@@ -70,11 +70,11 @@ class Trigonometry {/*{{{*/
     public static function tan($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         $c = cos(floatval($x));
         if (Trigonometry::isCloseToZero($c)) {
-            throw \UnexpectedValueException('Tangent undefined for '.$x.', cosine is zero too close to zero');
+            throw new \UnexpectedValueException('Tangent undefined for '.$x.', cosine is zero too close to zero');
         } else {
             return Trigonometry::zeroIfVerySmall(tan(floatval($x)));
         }
@@ -91,12 +91,12 @@ class Trigonometry {/*{{{*/
 	public static function sec($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
 		$x = floatval($x);
 		$c = cos($x);
         if (Trigonometry::isCloseToZero($c)) {
-            throw \UnexpectedValueException('Secant undefined for '.$x.', cosine is zero or too close to zero');
+            throw new \UnexpectedValueException('Secant undefined for '.$x.', cosine is zero or too close to zero');
 		} else {
             return Trigonometry::zeroIfVerySmall(1/$c);
 		}
@@ -113,12 +113,12 @@ class Trigonometry {/*{{{*/
 	public static function csc($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
 		$x = floatval($x);
 		$s = sin($x);
         if (Trigonometry::isCloseToZero($s)) {
-            throw \UnexpectedValueException('Cosecant undefined for '.$x.', sine is zero or too close to zero');
+            throw new \UnexpectedValueException('Cosecant undefined for '.$x.', sine is zero or too close to zero');
 		} else {
             return Trigonometry::zeroIfVerySmall(1/$s);
 		}
@@ -134,12 +134,12 @@ class Trigonometry {/*{{{*/
 	 */
 	public static function cot($x) {/*{{{*/
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
 		$x = floatval($x);
 		$t = tan($x);
         if (Trigonometry::isCloseToZero($t)) {
-            throw \UnexpectedValueException('Cosecant undefined for '.$x.', tangent is zero or too close to zero');
+            throw new \UnexpectedValueException('Cosecant undefined for '.$x.', tangent is zero or too close to zero');
 		} else {
             return Trigonometry::zeroIfVerySmall(1/$t);
 		}
@@ -158,7 +158,7 @@ class Trigonometry {/*{{{*/
     public static function asin($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         return Trigonometry::zeroIfVerySmall(asin(floatval($x)));
     } /*}}}*/
@@ -174,7 +174,7 @@ class Trigonometry {/*{{{*/
     public static function acos($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         return Trigonometry::zeroIfVerySmall(acos(floatval($x)));
     } /*}}}*/
@@ -190,7 +190,7 @@ class Trigonometry {/*{{{*/
     public static function atan($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         return Trigonometry::zeroIfVerySmall(atan(floatval($x)));
     } /*}}}*/
@@ -207,7 +207,7 @@ class Trigonometry {/*{{{*/
     public static function atan2($x, $y) /*{{{*/
     {
         if (!is_numeric($x) || !is_numeric($y)) {
-            throw \InvalidArgumentException('Expecting numeric parameters');
+            throw new \InvalidArgumentException('Expecting numeric parameters');
         }
         return Trigonometry::zeroIfVerySmall(atan2(floatval($x), floatval($y)));
     } /*}}}*/
@@ -223,10 +223,10 @@ class Trigonometry {/*{{{*/
     public static function asec($x)/*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         if (Trigonometry::isCloseToZero($x)) {
-            throw \UnexpectedValueException('Value too close to zero: '.$x);
+            throw new \UnexpectedValueException('Value too close to zero: '.$x);
         }
         $cos = 1/$x;
         return Trigonometry::zeroIfVerySmall(acos($cos));
@@ -243,10 +243,10 @@ class Trigonometry {/*{{{*/
     public static function acsc($x)/*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         if (Trigonometry::isCloseToZero($x)) {
-            throw \UnexpectedValueException('Value too close to zero: '.$x);
+            throw new \UnexpectedValueException('Value too close to zero: '.$x);
         }
         $sin = 1/$x;
         return Trigonometry::zeroIfVerySmall(asin($sin));
@@ -263,10 +263,10 @@ class Trigonometry {/*{{{*/
     public static function acot($x)/*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         if (Trigonometry::isCloseToZero($x)) {
-            throw \UnexpectedValueException('Value too close to zero: '.$x);
+            throw new \UnexpectedValueException('Value too close to zero: '.$x);
         }
         $tan = 1/$x;
         return Trigonometry::zeroIfVerySmall(atan($tan));
@@ -285,7 +285,7 @@ class Trigonometry {/*{{{*/
     public static function sinh($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         return Trigonometry::zeroIfVerySmall(sinh(floatval($x)));
     } /*}}}*/
@@ -301,7 +301,7 @@ class Trigonometry {/*{{{*/
     public static function cosh($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         return Trigonometry::zeroIfVerySmall(cosh(floatval($x)));
     } /*}}}*/
@@ -317,7 +317,7 @@ class Trigonometry {/*{{{*/
     public static function tanh($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         return Trigonometry::zeroIfVerySmall(tanh(floatval($x)));
     } /*}}}*/
@@ -331,11 +331,11 @@ class Trigonometry {/*{{{*/
 	 */
 	public static function sech ($x) {/*{{{*/
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
 		$c = cosh(floatval($x));
         if (Trigonometry::isCloseToZero($c)) {
-            throw \UnexpectedValueException('Undefined operation, hyperbolic cosine of parameter is zero');
+            throw new \UnexpectedValueException('Undefined operation, hyperbolic cosine of parameter is zero');
 		} else {
             return Trigonometry::zeroIfVerySmall(1/$c);
 		}
@@ -351,11 +351,11 @@ class Trigonometry {/*{{{*/
 	 */
 	public static function csch ($x) {/*{{{*/
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
 		$s = sinh(floatval($x));
         if (Trigonometry::isCloseToZero($s)) {
-            throw \UnexpectedValueException('Undefined operation, hyperbolic sine of parameter is zero');
+            throw new \UnexpectedValueException('Undefined operation, hyperbolic sine of parameter is zero');
 		} else {
             return Trigonometry::zeroIfVerySmall(1/$s);
 		}
@@ -371,11 +371,11 @@ class Trigonometry {/*{{{*/
 	 */
 	public static function coth ($x) {/*{{{*/
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
 		$t = tanh(floatval($x));
         if (Trigonometry::isCloseToZero($t)) {
-            throw \UnexpectedValueException('Undefined operation, hyperbolic tangent of parameter is zero');
+            throw new \UnexpectedValueException('Undefined operation, hyperbolic tangent of parameter is zero');
 		} else {
             return Trigonometry::zeroIfVerySmall(1/$t);
 		}
@@ -394,7 +394,7 @@ class Trigonometry {/*{{{*/
     public static function asinh($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         return Trigonometry::zeroIfVerySmall(asinh(floatval($x)));
     } /*}}}*/
@@ -410,7 +410,7 @@ class Trigonometry {/*{{{*/
     public static function acosh($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         return Trigonometry::zeroIfVerySmall(acosh(floatval($x)));
     } /*}}}*/
@@ -426,7 +426,7 @@ class Trigonometry {/*{{{*/
     public static function atanh($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         return Trigonometry::zeroIfVerySmall(atanh(floatval($x)));
     } /*}}}*/
@@ -442,11 +442,11 @@ class Trigonometry {/*{{{*/
 	public static function asech ($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         $x = floatval($x);
         if (Trigonometry::isCloseToZero($x)) {
-            throw \UnexpectedValueException('Undefined operation, parameter is too close zero or zero');
+            throw new \UnexpectedValueException('Undefined operation, parameter is too close zero or zero');
 		} else {
             $r = log((1 + sqrt(1 - $x*$x)) / $x);
             return Trigonometry::zeroIfVerySmall($r);
@@ -464,13 +464,13 @@ class Trigonometry {/*{{{*/
 	public static function acsch ($x) /*{{{*/
     {
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         $x = floatval($x);
         if (Trigonometry::isCloseToZero($x)) {
-            throw \UnexpectedValueException('Undefined operation, parameter is too close zero or zero');
+            throw new \UnexpectedValueException('Undefined operation, parameter is too close zero or zero');
 		} elseif ($x < 0) {
-            throw \UnexpectedValueException('Undefined operation, parameter is negative');
+            throw new \UnexpectedValueException('Undefined operation, parameter is negative');
 		} else {
             $r = log((1 + sqrt(1 + $x*$x)) / $x);
             return Trigonometry::zeroIfVerySmall($r);
@@ -489,15 +489,15 @@ class Trigonometry {/*{{{*/
     {
 
         if (!is_numeric($x)) {
-            throw \InvalidArgumentException('Expecting a numeric parameter');
+            throw new \InvalidArgumentException('Expecting a numeric parameter');
         }
         $x = floatval($x);
 		if ($x === 1.0) {
-            throw \UnexpectedValueException('Undefined operation, parameter cannot be 1.0');
+            throw new \UnexpectedValueException('Undefined operation, parameter cannot be 1.0');
 		} else {
 			$rat = ($x + 1)/($x - 1);
 			if ($rat < 0) {
-                throw \UnexpectedValueException('Undefined operation, (x+1)/(x-1) is negative');
+                throw new \UnexpectedValueException('Undefined operation, (x+1)/(x-1) is negative');
 			} else {
                 return Trigonometry::zeroIfVerySmall(0.5*log($rat));
 			}

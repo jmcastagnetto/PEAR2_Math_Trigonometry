@@ -4,4 +4,6 @@ use Math\Trigonometry;
 
 echo Trigonometry::sin(1.5)."\n";
 echo Trigonometry::sinh(1.5)."\n";
+echo Trigonometry::csch('foo')."\n";
+
 ?>
