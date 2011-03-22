@@ -31,6 +31,8 @@ namespace Math { /*{{{*/
 
         /**
          * Math\Trigonometry::EPSILON
+         *
+         * Cutoff value to decide if a result is too close to zero
          */
         const EPSILON = 1E-15;
 
@@ -39,9 +41,10 @@ namespace Math { /*{{{*/
         /**
          * Calculates the sine of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @static
          * @access public
          */
         public static function sin($x) /*{{{*/
@@ -55,9 +58,10 @@ namespace Math { /*{{{*/
         /**
          * Calculates the cosine of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @static
          * @access public
          */
         public static function cos($x) /*{{{*/
@@ -71,9 +75,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the tangent of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function tan($x) /*{{{*/
@@ -92,9 +98,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the secant of the parameter
          * 
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function sec($x) /*{{{*/
@@ -114,9 +122,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the cosecant of the parameter
          * 
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param   float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function csc($x) /*{{{*/
@@ -136,9 +146,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the cotangent of the parameter
          * 
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function cot($x) {/*{{{*/
@@ -159,9 +171,10 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse sine of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @static
          * @access public
          */
         public static function asin($x) /*{{{*/
@@ -175,9 +188,10 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse cosine of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @static
          * @access public
          */
         public static function acos($x) /*{{{*/
@@ -191,9 +205,10 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse tangent of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @static
          * @access public
          */
         public static function atan($x) /*{{{*/
@@ -207,10 +222,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse tangent of the parameter
          *
-         * @param float $x
-         * @param float $y
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @param  float $y
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if both parameters are not numeric
+         * @static
          * @access public
          */
         public static function atan2($x, $y) /*{{{*/
@@ -224,9 +240,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse secant of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function asec($x)/*{{{*/
@@ -244,9 +262,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse cosecant of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function acsc($x)/*{{{*/
@@ -264,9 +284,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse cotangent of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function acot($x)/*{{{*/
@@ -286,9 +308,10 @@ namespace Math { /*{{{*/
         /**
          * Calculates the hyperbolic sine of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @static
          * @access public
          */
         public static function sinh($x) /*{{{*/
@@ -302,9 +325,10 @@ namespace Math { /*{{{*/
         /**
          * Calculates the hyperbolic cosine of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @static
          * @access public
          */
         public static function cosh($x) /*{{{*/
@@ -318,9 +342,10 @@ namespace Math { /*{{{*/
         /**
          * Calculates the hyperbolic tangent of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @static
          * @access public
          */
         public static function tanh($x) /*{{{*/
@@ -330,12 +355,15 @@ namespace Math { /*{{{*/
             }
             return Trigonometry::zeroIfVerySmall(tanh(floatval($x)));
         } /*}}}*/
+
         /**
          * Calculates the hyperbolic secant of the parameter
          * 
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function sech ($x) {/*{{{*/
@@ -353,9 +381,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the hyperbolic cosecant of the parameter
          * 
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function csch ($x) {/*{{{*/
@@ -373,9 +403,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the hyperbolic cotangent of the parameter
          * 
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function coth ($x) {/*{{{*/
@@ -395,9 +427,10 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse hyperbolic sine of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @static
          * @access public
          */
         public static function asinh($x) /*{{{*/
@@ -411,9 +444,10 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse hyperbolic cosine of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @static
          * @access public
          */
         public static function acosh($x) /*{{{*/
@@ -427,9 +461,10 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse hyperbolic tangent of the parameter
          *
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @static
          * @access public
          */
         public static function atanh($x) /*{{{*/
@@ -443,9 +478,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse hyperbolic secant of the parameter
          * 
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function asech ($x) /*{{{*/
@@ -465,9 +502,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse hyperbolic cosecant of the parameter
          * 
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function acsch ($x) /*{{{*/
@@ -489,9 +528,11 @@ namespace Math { /*{{{*/
         /**
          * Calculates the inverse hyperbolic cotangent of the parameter
          * 
-         * @param float $x
-         * @return PEAR_Error|float A floating point on success, PEAR_Error object otherwise
-         * @public static
+         * @param  float $x
+         * @return float A floating point on success
+         * @throws \InvalidArgumentException if parameter is not numeric
+         * @throws \UnexpectedValueException if the calculation will be undefined or ill-defined
+         * @static
          * @access public
          */
         public static function acoth ($x) /*{{{*/
