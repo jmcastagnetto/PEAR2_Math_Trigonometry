@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
+ <name>PEAR2_Math_Trigonometry</name>
+ <channel>pear2.php.net</channel>
+ <summary>Math\Trigonometry
+</summary>
+ <description>=================
+
+Static class with methods that implement supplementary trigonometric,
+inverse trigonometric, hyperbolic, and inverse hyperbolic functions.
+
+This is code based on [PEAR's Math_TrigOp](http://pear.php.net/package/Math_TrigOp/),
+and compatible with PHP 5.3+ and PEAR2.
+
+-- Jesus M. Castagnetto
+</description>
+ <lead>
+  <name>﻿Jesus Castagnetto</name>
+  <user>jesus</user>
+  <email>jesus@castagnetto.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-03-26</date>
+ <time>14:47:04</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes/>
+ <contents>
+  <dir name="/">
+   <file role="php" name="php/PEAR2/Math/Trigonometry.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Math_Trigonometry/examples/examples/example.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.8</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease>
+  <filelist>
+   <install name="doc/pear2.php.net/PEAR2_Math_Trigonometry/examples/examples/example.php" as="PEAR2_Math_Trigonometry/examples/examples/example.php"/>
+   <install name="php/PEAR2/Math/Trigonometry.php" as="PEAR2/Math/Trigonometry.php"/>
+  </filelist>
+ </phprelease>
+</package>
