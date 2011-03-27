@@ -34,9 +34,9 @@ class TrigonometryTest extends \PHPUnit_Framework_TestCase
         $sin1 = Trigonometry::sin(M_PI_2);
         $sin2 = Trigonometry::sin(M_PI_4);
         $sin3 = Trigonometry::sin(1E-15);
-        $this->assertEquals(1, $sin1);
-        $this->assertEquals(0.70710678118655, $sin2, '', 1E-10);
-        $this->assertEquals(0, $sin3);
+        $this->assertEquals(1.0, $sin1, '', 1E-8);
+        $this->assertEquals(0.70710678118655, $sin2, '', 1E-8);
+        $this->assertEquals(0.0, $sin3, '', 1E-8);
     }
 
     /**
@@ -47,20 +47,22 @@ class TrigonometryTest extends \PHPUnit_Framework_TestCase
         $cos1 = Trigonometry::cos(M_PI_2);
         $cos2 = Trigonometry::cos(M_PI_4);
         $cos3 = Trigonometry::cos(1E-15);
-        $this->assertEquals(0, $cos1);
-        $this->assertEquals(0.70710678118655, $cos2, '', 1E-10);
-        $this->assertEquals(1, $cos3);
+        $this->assertEquals(0.0, $cos1, '', 1E-8);
+        $this->assertEquals(0.70710678118655, $cos2, '', 1E-8);
+        $this->assertEquals(1.0, $cos3, '', 1E-8);
     }
 
     /**
-     * @todo Implement testTan().
+     * Test of tangent
      */
     public function testTan()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $tan1 = Trigonometry::tan(M_PI);
+        $tan2 = Trigonometry::tan(M_PI_4);
+        $tan3 = Trigonometry::tan(1E-15);
+        $this->assertEquals(0.0, $tan1, '', 1E-8);
+        $this->assertEquals(1.0, $tan2, '', 1E-8);
+        $this->assertEquals(0.0, $tan3, '', 1E-8);
     }
 
     /**
