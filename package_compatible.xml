@@ -2,20 +2,19 @@
 <package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
  <name>PEAR2_Math_Trigonometry</name>
  <channel>pear2.php.net</channel>
- <summary>Math\Trigonometry
+ <summary>
+ Class with trigonometric, inv. trigonometric, hyperbolic and inv. hyperbolic functions
 </summary>
- <description>=================
-
+ <description>
 Static class with methods that implement supplementary trigonometric,
 inverse trigonometric, hyperbolic, and inverse hyperbolic functions.
 
 This is code based on [PEAR's Math_TrigOp](http://pear.php.net/package/Math_TrigOp/),
 and compatible with PHP 5.3+ and PEAR2.
 
--- Jesus M. Castagnetto
 </description>
  <lead>
-  <name>﻿Jesus Castagnetto</name>
+  <name>Jesus M. Castagnetto</name>
   <user>jesus</user>
   <email>jesus@castagnetto.com</email>
   <active>yes</active>

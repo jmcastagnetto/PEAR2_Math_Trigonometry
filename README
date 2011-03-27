@@ -1,10 +1,8 @@
-Math\Trigonometry
-=================
+Class with trigonometric, inv. trigonometric, hyperbolic and inv. hyperbolic functions
 
-Static class with methods that implement supplementary trigonometric,
-inverse trigonometric, hyperbolic, and inverse hyperbolic functions.
+The static methods implement safe versions of the functions, trying to avoid under- or
+overflows, testing if key values are close to zero. More exactly if they are within
+[-epsilon, epsilon], where epsilon = 1E-15.
 
 This is code based on [PEAR's Math_TrigOp](http://pear.php.net/package/Math_TrigOp/),
 and compatible with PHP 5.3+ and PEAR2.
-
--- Jesus M. Castagnetto
