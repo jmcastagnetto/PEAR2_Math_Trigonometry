@@ -31,12 +31,10 @@ class TrigonometryTest extends \PHPUnit_Framework_TestCase
      */
     public function testSin()
     {
-        $sin1 = Trigonometry::sin(M_PI_2);
-        $sin2 = Trigonometry::sin(M_PI_4);
-        $sin3 = Trigonometry::sin(1E-15);
-        $this->assertEquals(1.0, $sin1, '', 1E-8);
-        $this->assertEquals(0.70710678118655, $sin2, '', 1E-8);
-        $this->assertEquals(0.0, $sin3, '', 1E-8);
+        $sin1 = Trigonometry::sin(M_PI_4);
+        $sin2 = Trigonometry::sin(1E-15);
+        $this->assertEquals(0.70710678118655, $sin1, '', 1E-8);
+        $this->assertEquals(0.0, $sin2, '', 1E-8);
     }
 
     /**
@@ -44,12 +42,10 @@ class TrigonometryTest extends \PHPUnit_Framework_TestCase
      */
     public function testCos()
     {
-        $cos1 = Trigonometry::cos(M_PI_2);
-        $cos2 = Trigonometry::cos(M_PI_4);
-        $cos3 = Trigonometry::cos(1E-15);
-        $this->assertEquals(0.0, $cos1, '', 1E-8);
-        $this->assertEquals(0.70710678118655, $cos2, '', 1E-8);
-        $this->assertEquals(1.0, $cos3, '', 1E-8);
+        $cos1 = Trigonometry::cos(M_PI_4);
+        $cos2 = Trigonometry::cos(1E-15);
+        $this->assertEquals(0.70710678118655, $cos1, '', 1E-8);
+        $this->assertEquals(1.0, $cos2, '', 1E-8);
     }
 
     /**
@@ -57,78 +53,65 @@ class TrigonometryTest extends \PHPUnit_Framework_TestCase
      */
     public function testTan()
     {
-        $tan1 = Trigonometry::tan(M_PI);
-        $tan2 = Trigonometry::tan(M_PI_4);
-        $tan3 = Trigonometry::tan(1E-15);
-        $this->assertEquals(0.0, $tan1, '', 1E-8);
-        $this->assertEquals(1.0, $tan2, '', 1E-8);
-        $this->assertEquals(0.0, $tan3, '', 1E-8);
+        $tan1 = Trigonometry::tan(M_PI_4);
+        $tan2 = Trigonometry::tan(1E-15);
+        $this->assertEquals(1.0, $tan1, '', 1E-8);
+        $this->assertEquals(0.0, $tan2, '', 1E-8);
     }
 
     /**
-     * @todo Implement testSec().
+     * Test of secant
      */
     public function testSec()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $sec = Trigonometry::sec(2*M_PI/3);
+        $this->assertEquals(-2.0, $sec, '', 1E-8);
     }
 
     /**
-     * @todo Implement testCsc().
+     * Test of cosecant
      */
     public function testCsc()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $csc = Trigonometry::csc(2*M_PI/3);
+        $this->assertEquals(1.1547005383793, $csc, '', 1E-8);
     }
 
     /**
-     * @todo Implement testCot().
+     * Test of cotangent
      */
     public function testCot()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+
+        $cot = Trigonometry::cot(M_PI/3);
+        $this->assertEquals(0.57735026918963, $cot, '', 1E-8);
     }
 
     /**
-     * @todo Implement testAsin().
+     * Test of arcsine
      */
     public function testAsin()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $asin = Trigonometry::asin(1.0);
+        $this->assertEquals(M_PI_2, $asin, '', 1E-8);
     }
 
     /**
-     * @todo Implement testAcos().
+     * Test of arccosine
      */
     public function testAcos()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $acos = Trigonometry::acos(0.0);
+        $this->assertEquals(M_PI_2, $acos, '', 1E-8);
     }
 
     /**
-     * @todo Implement testAtan().
+     * Test of arctangent
      */
     public function testAtan()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $atan = Trigonometry::atan(1.0);
+        $this->assertEquals(M_PI_4, $atan, '', 1E-8);
     }
 
     /**
