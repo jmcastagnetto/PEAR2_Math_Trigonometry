@@ -1,7 +1,5 @@
 <?php
 namespace Math;
-
-
 require_once '../../src/Math/Trigonometry.php';
 
 /**
@@ -10,6 +8,7 @@ require_once '../../src/Math/Trigonometry.php';
  */
 class TrigonometryTest extends \PHPUnit_Framework_TestCase
 {
+
     /**
      * Sets up the fixture
      * This method is called before a test is executed.
@@ -73,7 +72,7 @@ class TrigonometryTest extends \PHPUnit_Framework_TestCase
      */
     public function testCsc()
     {
-        $csc = Trigonometry::csc(2*M_PI/3);
+        $csc = Trigonometry::csc(M_PI/3);
         $this->assertEquals(1.1547005383793, $csc, '', 1E-8);
     }
 
@@ -115,179 +114,152 @@ class TrigonometryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @todo Implement testAtan2().
+     * Test of arctangent with two parameters (atan2)
      */
     public function testAtan2()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $atan2_1 = Trigonometry::atan2(1, 0);
+        $atan2_2 = Trigonometry::atan2(sqrt(3), 1);
+        $this->assertEquals(M_PI_2, $atan2_1, '', 1E-8);
+        $this->assertEquals(M_PI / 3, $atan2_2, '', 1E-8);
     }
 
     /**
-     * @todo Implement testAsec().
+     * Test of arcsecant
      */
     public function testAsec()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $asec = Trigonometry::asec(-2.0);
+        $this->assertEquals(2*M_PI/3, $asec, '', 1E-8);
     }
 
     /**
-     * @todo Implement testAcsc().
+     * Test of arccosecant
      */
     public function testAcsc()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $acsc = Trigonometry::acsc(1.1547005383793);
+        $this->assertEquals(M_PI/3, $acsc, '', 1E-8);
     }
 
     /**
-     * @todo Implement testAcot().
+     * Test of arccotangent
      */
     public function testAcot()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $acot = Trigonometry::acot(0.57735026918963);
+        $this->assertEquals(M_PI/3, $acot, '', 1E-8);
     }
 
     /**
-     * @todo Implement testSinh().
+     * Test of hyperbolic sine
      */
     public function testSinh()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $sinh = Trigonometry::sinh(1.5);
+        $this->assertEquals(2.1292794550948, $sinh, '', 1E-8);
     }
 
     /**
-     * @todo Implement testCosh().
+     * Test of hyperbolic cosine
      */
     public function testCosh()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $cosh = Trigonometry::cosh(1.5);
+        $this->assertEquals(2.3524096152432, $cosh, '', 1E-8);
     }
 
     /**
-     * @todo Implement testTanh().
+     * Test of hyperbolic tangent
      */
     public function testTanh()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $tanh = Trigonometry::tanh(1.5);
+        $this->assertEquals(0.9051482536448, $tanh, '', 1E-8);
     }
 
+
     /**
-     * @todo Implement testSech().
+     * Test of hyperbolic secant
      */
     public function testSech()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $sech = Trigonometry::sech(1.5);
+        $this->assertEquals(0.42509603494228, $sech, '', 1E-8);
     }
 
     /**
-     * @todo Implement testCsch().
+     * Test of hyperbolic cosecant
      */
     public function testCsch()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $csch = Trigonometry::csch(1.5);
+        $this->assertEquals(0.46964244059522, $csch, '', 1E-8);
     }
 
     /**
-     * @todo Implement testCoth().
+     * Test of hyperbolic cotangent
      */
     public function testCoth()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $coth = Trigonometry::coth(1.5);
+        $this->assertEquals(1.1047913929825, $coth, '', 1E-8);
     }
 
     /**
-     * @todo Implement testAsinh().
+     * Test of hyperbolic arcsine
      */
     public function testAsinh()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $asinh = Trigonometry::asinh(1.2);
+        $this->assertEquals(1.0159731341797, $asinh, '', 1E-8);
     }
 
     /**
-     * @todo Implement testAcosh().
+     * Test of hyperbolic arccosine
      */
     public function testAcosh()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $acosh = Trigonometry::acosh(1.2);
+        $this->assertEquals(0.62236250371478, $acosh, '', 1E-8);
     }
 
     /**
-     * @todo Implement testAtanh().
+     * Test of hyperbolic arctangent
      */
     public function testAtanh()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $atanh = Trigonometry::atanh(0.2);
+        $this->assertEquals(0.20273255405408, $atanh, '', 1E-8);
     }
 
+
     /**
-     * @todo Implement testAsech().
+     * Test of hyperbolic arcsecant
      */
     public function testAsech()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $asech = Trigonometry::asech(0.2);
+        $this->assertEquals(2.2924316695612, $asech, '', 1E-8);
     }
 
     /**
-     * @todo Implement testAcsch().
+     * Test of hyperbolic arccosecant
      */
     public function testAcsch()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $acsch = Trigonometry::acsch(1.2);
+        $this->assertEquals(0.75848613719374, $acsch, '', 1E-8);
     }
 
     /**
-     * @todo Implement testAcoth().
+     * Test of hyperbolic arccotangent
      */
     public function testAcoth()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $acoth = Trigonometry::acoth(1.2);
+        $this->assertEquals(1.1989476363992, $acoth, '', 1E-8);
     }
+
 }
 ?>
