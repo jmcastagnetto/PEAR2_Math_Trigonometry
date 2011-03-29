@@ -2,24 +2,24 @@
 <package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
  <name>PEAR2_Math_Trigonometry</name>
  <channel>pear2.php.net</channel>
- <summary>
- Class with trigonometric, inv. trigonometric, hyperbolic and inv. hyperbolic functions
- </summary>
+ <summary>Class with trigonometric, inv. trigonometric, hyperbolic and inv. hyperbolic functions
+</summary>
  <description>
-Static class with safe methods that implement supplementary trigonometric,
-inverse trigonometric, hyperbolic, and inverse hyperbolic functions.
+The static methods implement safe versions of the functions, trying to avoid under- or
+overflows, testing if key values are close to zero. More exactly if they are within
+[-epsilon, epsilon], where epsilon = 1E-15.
 
 This is code based on [PEAR's Math_TrigOp](http://pear.php.net/package/Math_TrigOp/),
 and compatible with PHP 5.3+ and PEAR2.
 </description>
  <lead>
-  <name>Jesus M. Castagnetto</name>
+  <name>Jesus Castagnetto</name>
   <user>jesus</user>
   <email>jesus@castagnetto.com</email>
   <active>yes</active>
  </lead>
- <date>2011-03-26</date>
- <time>14:47:04</time>
+ <date>2011-03-29</date>
+ <time>15:25:34</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -29,7 +29,8 @@ and compatible with PHP 5.3+ and PEAR2.
   <api>alpha</api>
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
- <notes/>
+ <notes>- Initial version of port of PEAR::Math_TrigOp to PEAR2 standards
+</notes>
  <contents>
   <dir name="/">
    <dir name="examples">
@@ -38,6 +39,11 @@ and compatible with PHP 5.3+ and PEAR2.
    <dir name="src" baseinstalldir="PEAR2">
     <dir name="Math">
      <file role="php" name="Trigonometry.php"/>
+    </dir>
+   </dir>
+   <dir name="tests" baseinstalldir="/">
+    <dir name="Math">
+     <file role="test" name="TrigonometryTest.php"/>
     </dir>
    </dir>
   </dir>
