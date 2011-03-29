@@ -1,18 +1,18 @@
 <?php
 /**
- * Math\Trigonometry
+ * PEAR2\Math\Trigonometry
  *
  * PHP Version 5
  *
  * @category  Math
- * @package   Math\Trigonometry
+ * @package   PEAR2\Math\Trigonometry
  * @author    Jesus M. Castagnetto <jesus@castagnetto.com>
  * @copyright 2011 Jesus M. Castagnetto
  * @license   http://www.opensource.org/licenses/bsd-license.php New BSD License
  * @version   0.1.0
  * @link      https://github.com/jmcastagnetto/Math_Trigonometry
  */
-namespace Math { /*{{{*/
+namespace PEAR2\Math { /*{{{*/
 
 /**
  * Class implementing static circular and hyperbolic trigonometric functions, and their inverses
@@ -20,13 +20,13 @@ namespace Math { /*{{{*/
  * Example of use:
  *
  * require_once 'Math/Trigonometry.php';
- * $cot = Math\Trigonometry::cot(0.3445);
- * $x = Math\Trigonometry::acsch(-0.231);
+ * $cot = PEAR2\Math\Trigonometry::cot(0.3445);
+ * $x = PEAR2\Math\Trigonometry::acsch(-0.231);
  * 
  * Originally this class was part of NumPHP (Numeric PHP package)
  *
  * @category  Math
- * @package   Math\Trigonometry
+ * @package   PEAR2\Math\Trigonometry
  * @author    Jesus M. Castagnetto <jesus@castagnetto.com>
  * @copyright 2011 Jesus M. Castagnetto
  * @license   http://www.opensource.org/licenses/bsd-license.php New BSD License
@@ -37,7 +37,7 @@ class Trigonometry /*{{{*/
 {
 
     /**
-     * Math\Trigonometry::EPSILON
+     * PEAR2\Math\Trigonometry::EPSILON
      *
      * Cutoff value to decide if a result is too close to zero
      */
@@ -622,5 +622,5 @@ class Trigonometry /*{{{*/
 
 }/*}}} class Trigonometry */
 
-} /*}}} namespace Math\Trigonometry */
+} /*}}} namespace PEAR2\Math\Trigonometry */
 ?>

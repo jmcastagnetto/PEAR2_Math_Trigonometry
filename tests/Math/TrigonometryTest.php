@@ -1,9 +1,9 @@
 <?php
-namespace Math {
-use Math\Trigonometry;
+namespace PEAR2\Math {
+use PEAR2\Math\Trigonometry;
 
     /**
-     * Test class for Math\Trigonometry.
+     * Test class for PEAR2\Math\Trigonometry.
      */
     class TrigonometryTest extends \PHPUnit_Framework_TestCase
     {

@@ -1,6 +1,6 @@
 <?php
-namespace Math {
-use Math\Trigonometry; 
+namespace PEAR2\Math {
+use PEAR2\Math\Trigonometry; 
 
     echo "* Standard values:\n";
     echo "\tPI = ".strval(M_PI)."\n";
