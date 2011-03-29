@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
- <name>Math_Trigonometry</name>
+ <name>PEAR2_Math_Trigonometry</name>
  <channel>pear2.php.net</channel>
  <summary>Class with trigonometric, inv. trigonometric, hyperbolic and inv. hyperbolic functions
 </summary>
@@ -19,7 +19,7 @@ and compatible with PHP 5.3+ and PEAR2.
   <active>yes</active>
  </lead>
  <date>2011-03-29</date>
- <time>15:25:34</time>
+ <time>15:30:51</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -33,9 +33,9 @@ and compatible with PHP 5.3+ and PEAR2.
 </notes>
  <contents>
   <dir name="/">
-   <file role="test" name="test/pear2.php.net/Math_Trigonometry/Math/Math/TrigonometryTest.php"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Math_Trigonometry/Math/Math/TrigonometryTest.php"/>
    <file role="php" name="php/PEAR2/Math/Trigonometry.php"/>
-   <file role="doc" name="doc/pear2.php.net/Math_Trigonometry/examples/examples/example.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Math_Trigonometry/examples/examples/example.php"/>
   </dir>
  </contents>
  <dependencies>
@@ -50,9 +50,9 @@ and compatible with PHP 5.3+ and PEAR2.
  </dependencies>
  <phprelease>
   <filelist>
-   <install name="doc/pear2.php.net/Math_Trigonometry/examples/examples/example.php" as="Math_Trigonometry/examples/examples/example.php"/>
+   <install name="doc/pear2.php.net/PEAR2_Math_Trigonometry/examples/examples/example.php" as="PEAR2_Math_Trigonometry/examples/examples/example.php"/>
    <install name="php/PEAR2/Math/Trigonometry.php" as="PEAR2/Math/Trigonometry.php"/>
-   <install name="test/pear2.php.net/Math_Trigonometry/Math/Math/TrigonometryTest.php" as="Math_Trigonometry/Math/Math/TrigonometryTest.php"/>
+   <install name="test/pear2.php.net/PEAR2_Math_Trigonometry/Math/Math/TrigonometryTest.php" as="PEAR2_Math_Trigonometry/Math/Math/TrigonometryTest.php"/>
   </filelist>
  </phprelease>
 </package>
